@@ -24,5 +24,28 @@ class vegetableRepository
         ]);
 
     }
+
+    function update()
+    {
+        vegetable::where('name', '=', 'tomato')->update([
+            'name' => 'tomatotoooo',
+            'color' => 'redred',
+            'price' => 777
+        ]);
+
+    }
+
+    function delete()
+    {
+        vegetable::where('name', '=', 'cucumber')->delete();
+
+    }
+
+    function select()
+    {
+        $select = vegetable::all();
+        return $select;
+    }
+
 }
 

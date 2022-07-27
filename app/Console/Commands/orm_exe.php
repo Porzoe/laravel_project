@@ -40,10 +40,33 @@ class orm_exe extends Command
      */
     public function handle()
     {
+        // // insert
+        // require_once("/home/porzoe/Source/laravel_project/app/Models/vegetable.php");
+        // $vegetable_orm = new vegetableRepository();
+        // $vegetable_orm->insert();
+        // echo 'テスト';
+        // return 0;
+
+        // // update
+        // require_once("/home/porzoe/Source/laravel_project/app/Models/vegetable.php");
+        // $vegetable_orm = new vegetableRepository();
+        // $vegetable_orm->update();
+        // echo 'テスト';
+        // return 0;
+
+        // delete
         require_once("/home/porzoe/Source/laravel_project/app/Models/vegetable.php");
         $vegetable_orm = new vegetableRepository();
-        $vegetable_orm->insert();
+        $vegetable_orm->delete();
         echo 'テスト';
         return 0;
+        
+        // // select
+        // require_once("/home/porzoe/Source/laravel_project/app/Models/vegetable.php");
+        // $vegetable_orm = new vegetableRepository();
+        // $select_array = $vegetable_orm->select();
+        // echo $select_array;
+        // return 0;
+
     }
 }
