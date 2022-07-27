@@ -16,7 +16,7 @@ class CreateVegetablesTable extends Migration
         Schema::create('vegetables', function (Blueprint $table) {
             $table->string('name');
             $table->string('color');
-            $table->string('price');
+            $table->integer('price');
         });
     }
 

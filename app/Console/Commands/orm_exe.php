@@ -2,8 +2,9 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
 use App\Models\vegetableRepository;
+use Illuminate\Console\Command;
+// use App\Models\vegetableRepository;
 
 
 class orm_exe extends Command
@@ -39,6 +40,7 @@ class orm_exe extends Command
      */
     public function handle()
     {
+        require_once("/home/porzoe/Source/laravel_project/app/Models/vegetable.php");
         $vegetable_orm = new vegetableRepository();
         $vegetable_orm->insert();
         echo 'テスト';

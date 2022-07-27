@@ -9,11 +9,12 @@ class vegetable extends Model
 {
     use HasFactory;
     protected $fillable = ['name', 'color', 'price'];
+    public $timestamps = false;
 }
 
 
-class vegetableRepository{
-    
+class vegetableRepository
+{
     function insert()
     {
         vegetable::create([
@@ -21,9 +22,7 @@ class vegetableRepository{
             'color' => 'red',
             'price' => 100
         ]);
+
     }
 }
-
-$ooo = new vegetableRepository();
-$ooo->insert();
 
