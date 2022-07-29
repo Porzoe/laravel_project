@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\orm_exe;
+use App\Http\Controllers\top;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', [orm_exe::class, 'showPage']);
+Route::get('/test/{param?}', [orm_exe::class, 'showPage']);
+Route::get('/top', [top::class, 'showPage']);
 

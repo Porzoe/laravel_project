@@ -47,5 +47,18 @@ class vegetableRepository
         return $select;
     }
 
+    function select_p($param)
+    {
+        if($param <> ""){
+            $select = vegetable::where('name', '=' , $param)->first();
+            return $select;
+        }
+        else{
+            $select = vegetable::all();
+            return $select[0];
+        }
+        
+    }
+
 }
 

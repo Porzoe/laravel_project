@@ -14,6 +14,8 @@
         <span>◆色：</span><span>{{$vege_color}}</span>
         <br>
         <span>◆値段:</span><span>{{$vege_price}}</span>
+        <br>
+        <span>◆パラメータ:</span><span>{{$param}}</span>
     </div>
 </body>
 
