@@ -11,12 +11,14 @@ class orm_exe extends Controller
 
         require_once("/home/porzoe/Source/laravel_project/app/Models/vegetable.php");
         $vege = new vegetableRepository();
-        $vege_data = $vege->select_p($param);              
 
-        $vege_name = $vege_data["name"];
-        $vege_color = $vege_data["color"];
-        $vege_price = $vege_data["price"];
+        $vege_data = $vege->select();
 
-        return view('test',compact('vege_name','vege_color','vege_price', 'param'));
+        // $vege_name = $vege_data["name"];
+        // $vege_color = $vege_data["color"];
+        // $vege_price = $vege_data["price"];
+
+        return view('test',compact('vege_data'));
     }
 }
+
